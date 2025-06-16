@@ -1,0 +1,22 @@
+#viewport
+    {
+        margin: 0 auto;
+        border:ridge #deb887 8px;
+        height:28%;
+        width:640px;
+        position:relative;
+        overflow:hidden;
+        box-align:center
+    }
+
+#carousel {
+    width:3840px;
+    position:relative;
+    display:flex;
+}
+
+#carousel img{
+    border:inset 3px #b3670b;
+    height:200px;
+    width: 640px;
+}

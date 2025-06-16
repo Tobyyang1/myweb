@@ -1,0 +1,77 @@
+<style>
+#viewport
+    {
+        border:ridge #deb887 8px;
+        height:10%;
+        width:640px;
+        position:relative;
+        overflow:hidden;
+       
+    }
+
+#carousel{
+    height:10%;
+    width:3840px;
+    position:relative;
+    display:flex;
+}
+
+img{
+    border:inset 3px #b3670b;
+    height:120px;
+    width: 640px;
+}
+
+</style>
+
+<!--廣告輪播系統-->
+<div id="viewport">
+    <div id="carousel">
+        <img class="images" src="imgs/廣告1.png">
+        <img class="images" src="imgs/廣告2.png">
+        <img class="images" src="ADImgs/3.jpg">
+        <img class="images" src="ADImgs/4.jpg">
+        <img class="images" src="ADImgs/5.jpg">
+        <img class="images" src="ADImgs/1.jpg"> <!--方便前後銜接-->
+    </div>
+</div>
+
+<script>
+let timer= setInterval(moveLeft,0); //計時器設定
+let pos=0;  //目前X座標
+
+function startCarousel(){   //方便辨識進入點
+    clearInterval(timer);
+    setTimeout(()=>{timer= setInterval(moveLeft,0);},1000);
+}
+
+function delay(){   //用於延遲時間(雖然實際效果和start一樣)
+    clearInterval(timer);
+    setTimeout(()=>{timer= setInterval(moveLeft,0);},1000);
+}
+function moveLeft()
+{
+    pos-=1;
+    if(pos < -3200){
+       pos = 0;
+    }
+    carousel.style.left = pos+"px";
+    if(pos%640==0&&pos!=0){
+        delay();
+    }
+}
+
+startCarousel();    //進入點
+
+imgs=document.querySelectorAll(".images");
+for(let i=0;i<imgs.length;i++){
+    imgs[i].onclick=()=>{
+        if(i==0||i==5){
+            alert("這是第1則廣告")    
+        }
+       else{
+            alert("這是第"+(i+1)+"則廣告")
+       }
+    }
+}
+</script>

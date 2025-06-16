@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>餐廳線上點餐系統</title>
+    <style>
+        #title {
+            display: flex;
+            justify-content: space-between;     /* 文字與購物車左右對齊 */
+            align-items: center;                /* 垂直置中 */
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 10px 30px;                 /* 內距，上下10px，左右30px */
+            transition: all 1.5s;               /* 字體平滑過渡 */
+            background-color: #f9edbc;
+        }
+
+        #title:hover {
+            font-size: 36px;
+            background-color: #fff8dc;
+            cursor: pointer;                    /* 滑鼠變手指 */
+
+        }
+
+        .cart-icon {
+            width: 80px;
+            height: auto;
+            cursor: pointer;
+            transition: filter 0.3s;            /* 購物車平滑過渡(按鍵速度)) */
+        }
+        .cart-icon:active {
+            filter: brightness(50);             /* 變暗 (50%亮度) */
+        } 
+        
+    </style>
+</head>
+<body>
+
+    <div id="title">
+        <span>餐廳線上點餐系統</span>
+        <a herf="cart.html">
+        <img src="icon.png" alt="購物車" class="cart-icon">
+        </a>
+    </div>
+
+</body>
+</html>
+
+
+

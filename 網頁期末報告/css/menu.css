@@ -1,0 +1,46 @@
+body{
+  background-image:url(../imgs/log.png)
+}
+ 
+.menu {
+  background-color:white;
+  width: 60%;
+  height: 50%; 
+  margin: 0px auto;
+  border: 2px solid #080808;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.menu_item {
+    display: flex;/*讓畫面的圖片和文字可以水平排列*/
+}
+
+.menu_item img {
+  border: solid 2px black;
+  border-radius: 10px;
+  height: auto;      /* 自動調整高度，避免變形 */
+  width: 60%; 
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  aspect-ratio: 16 / 9;/*強制圖片顯示為 16:9 的寬高比例*/
+  object-fit: cover;/*圖片會縮放裁切來完整填滿容器，而且不會變形*/
+}
+.menu_item p {
+  margin: 5px 0;
+   word-break: break-word;/*強制在無空格時也能斷行*/
+}
+.menu_item button {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+}
+
+.menu_item input {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  font-size: 16px;
+}
+

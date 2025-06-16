@@ -1,0 +1,32 @@
+#title {
+            display: flex;
+            justify-content: center;            /* 讓子元素水平置中 */
+            align-items: center;                /* 垂直置中  */
+            margin: 20px auto;                  /* 上下 20px，左右置中 */
+            font-size: 32px;
+            font-weight: bold;
+            padding: 10px 30px;                 /* 內距，上下10px，左右30px */
+            transition: all 1.5s;               /* 字體平滑過渡 */
+            background-color: #f9edbc;
+            position: relative;                 /* 讓購物車絕對定位參考 */
+        }
+
+        #title:hover {
+            font-size: 36px;
+            background-color: #fff8dc;
+            cursor: pointer;                    /* 滑鼠變手指 */
+
+        }
+
+        .cart-icon {
+            position: absolute;                 /* 絕對定位 */
+            top : 5px;
+            right: 30px;                        /* 圖片固定靠右邊 30px */
+            width: 60px;
+            height: auto;
+            cursor: pointer;
+            transition: filter 0.3s;            /* 購物車平滑過渡(按鍵速度)) */
+        }
+        .cart-icon:active {
+            filter: brightness(50);             /* 變暗 (50%亮度) */
+        } 

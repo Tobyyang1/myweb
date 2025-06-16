@@ -1,0 +1,56 @@
+/* 按鈕 CSS 區塊 */
+.table_Btn {
+    border-spacing: 15px;                 /* 表格儲存格間的空隙 */
+    margin: 5px auto;                     /* 距離上下畫面10px ，左右置中 */
+    width: 40%;                        /* 寬度佔畫面 60% */                  
+  }
+  /* 按鈕樣式設定 */
+  tr button {
+    width: 100%;                          /* 撐滿整個儲存格寬度 */
+    height: 50px;                        
+    font-size: 20px;                     
+    font-weight: bold;                                 
+    border: none;                         /* 移除按鈕預設邊框 */
+    border-radius: 12px;                 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); 
+ /*0: 陰影的水平位移 4px: 陰影的垂直位移 6px: 陰影的模糊半徑，值越大越模糊。
+ rgba(0, 0, 0, 0.5): rgba()陰影顏色，這裡是黑色，透明度為 0.5*/
+  }
+  /*用不同顏色區分菜單類別 */
+  .btn_Appetizer {
+    background-color: #ffa07a;            
+  }
+
+  .btn_Main {
+    background-color: #98fb98;           
+  }
+
+  .btn_Drinks {
+    background-color: #add8e6;            
+  }
+
+  .btn_Dessert {
+    background-color: #dda0dd;            
+  }
+
+  /* 各按鈕滑鼠滑過時的顏色變化*/
+  .btn_Appetizer:hover {
+    background-color: #ff7f50;
+  }
+
+  .btn_Main:hover {
+    background-color: #90ee90;
+  }
+
+  .btn_Drinks:hover {
+    background-color: #87cefa;
+  }
+
+  .btn_Dessert:hover {
+    background-color: #ba55d3;
+  }
+
+  /* 按下按鈕時的視覺效果*/
+  button:active {
+    transform: scale(0.95);     /* 微微縮小 */
+  }
